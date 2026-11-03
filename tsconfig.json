@@ -1,19 +1,18 @@
 {
   "compilerOptions": {
-    "baseUrl": ".",
     "inlineSourceMap": true,
     "inlineSources": true,
     "module": "ESNext",
-    "target": "es5",
-    "allowJs": true,
+    "target": "ES2022",
     "noImplicitAny": true,
-    "moduleResolution": "node",
+    "strict": false,
+    "skipLibCheck": true,
+    "types": ["node", "jest"],
+    "moduleResolution": "bundler",
     "importHelpers": true,
     "lib": [
-      "dom",
-      "es5",
-      "scripthost",
-      "es2020"
+      "DOM",
+      "ES2022"
     ]
   },
   "include": [

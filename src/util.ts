@@ -65,7 +65,7 @@ export class Notifier {
  * message postings before responses to prior messages have been received.
  */
 export class WorkerManager {
-  private worker = new PromiseWorker(this._worker);
+  private worker: PromiseWorker;
   options: WorkerManagerOptions;
 
   /**
@@ -76,6 +76,7 @@ export class WorkerManager {
   blocked = false;
 
   constructor(private _worker: Worker, options: WorkerManagerOptions) {
+    this.worker = new PromiseWorker(this._worker);
     this.options = { ...workerManagerDefaultOptions, ...options };
   }
 

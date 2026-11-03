@@ -8,7 +8,7 @@ import webWorkerLoader from 'rollup-plugin-web-worker-loader';
 export default {
   input: 'src/main.ts',
   output: {
-    dir: '.',
+    file: 'main.js',
     sourcemap: 'inline',
     format: 'cjs',
     exports: 'default',

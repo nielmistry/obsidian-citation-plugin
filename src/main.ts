@@ -15,7 +15,6 @@ import {
   TemplateDelegate as Template,
 } from 'handlebars';
 
-
 import CitationEvents from './events';
 import {
   InsertCitationModal,
@@ -249,11 +248,11 @@ export default class CitationPlugin extends Plugin {
 
           return this.library;
         })
-        .catch((e) => {
+        .catch((e): null => {
           if (e instanceof WorkerManagerBlocked) {
             // Silently catch WorkerManager error, which will be thrown if the
             // library is already being loaded
-            return;
+            return null;
           }
 
           console.error(e);
