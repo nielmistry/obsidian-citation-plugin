@@ -94,7 +94,7 @@ class SearchModal extends FuzzySuggestModal<Entry> {
       this.inputEl.disabled = false;
       this.inputEl.focus();
 
-      // @ts-ignore: not exposed in API.
+      // @ts-expect-error: not exposed in API.
       this.updateSuggestions();
     }
   }

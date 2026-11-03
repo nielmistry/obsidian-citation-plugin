@@ -383,8 +383,8 @@ export class EntryBibLaTeXAdapter extends Entry {
   title?: string;
   titleShort?: string;
   URL?: string;
-  _year?: string;
-  _note?: string[];
+  declare _year?: string;
+  declare _note?: string[];
 
   constructor(private data: EntryDataBibLaTeX) {
     super();
